@@ -1,6 +1,7 @@
 module.exports = {
+    devtool : 'eval-source-map',
     entry: [
-        './source/App.js'
+        './source/index.js'
     ],
     output: {
         path: __dirname,
