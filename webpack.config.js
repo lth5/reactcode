@@ -14,5 +14,6 @@ module.exports = {
                 loader: 'babel-loader'
             }
         ]
-    }
+    },
+    devServer: { disableHostCheck: true}
 }
