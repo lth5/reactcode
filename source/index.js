@@ -1,13 +1,30 @@
-import React,{Component} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-class Hello extends Component{
-    render(){
-        return(
-            <h1>Hello World</h1>
-        )
+import App from './container/App.jsx';
+let datalist = [
+    {
+        id: 1,
+        title: '看你不知道的js下',
+        status: 'todo',
+        desc: 'adadadadad',
+        tasks:[]
+    },
+    {
+        id: 2,
+        title: '看你不知道的js中',
+        status: 'doing',
+        desc: 'adadadadad',
+        tasks:[]
+    },
+    {
+        id: 3,
+        title: '看你不知道的js上',
+        status: 'done',
+        desc: 'adadadadad',
+        tasks:[]
     }
-};
+]
 ReactDOM.render(
-	<Hello />,
+	<App cards={datalist} />,
 	document.getElementById('root')
 )
