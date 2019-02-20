@@ -15,12 +15,16 @@ class App extends Component {
     componentWillMount() {
     
     }
+    handleClick(){
+        this.setState({name:222})
+    }
     render() {
         return (
             <div className="main">
                 <NoState name="prop init name"/>
                 {/* <CreateClassCom name="ssdcs"/> */}
                 <CompinentCom name="prop init name"/>
+                <button onClick={this.handleClick.bind(this)}>改变props</button>
             </div>
         );
     }
