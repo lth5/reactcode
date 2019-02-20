@@ -1,0 +1,57 @@
+@import "./reset.less";
+
+html,body {
+    background-color: #fff;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    &,
+    &:visited {
+        color: black;
+    }
+}
+
+/**
+ *  单行溢出显示 “...”
+ */
+.ellipsis() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/**
+ *  清除浮动
+ */
+.clearfix{
+    zoom: 1;
+    &::after {
+        content: ".";
+        clear: both;
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+.bgc(@c) {
+    background-color: @c;
+}
+
+.bgi(@img_url) {
+    background-image: url(@img_url);
+}
+
+.center() {
+    text-align: center;
+}
+
+.hidden() {
+    overflow: hidden;
+}
+
+.none() {
+    display: none;
+}
