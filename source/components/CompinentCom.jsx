@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
+
 export default class CompinentCom extends Component {
-   const propTypes = {
-        name : PropTypes.number,
-    }
-    const defaultProps = {
-        xx : 'ssss'
-    } 
     constructor(props){
         super(props)
         this.state={
@@ -30,3 +26,10 @@ export default class CompinentCom extends Component {
         ); 
     } 
 };
+
+CompinentCom.propTypes = {
+    name : PropTypes.number,
+}
+CompinentCom.defaultProps = {
+    xx : 'ssss'
+} 
