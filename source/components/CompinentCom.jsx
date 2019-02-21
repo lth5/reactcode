@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import ReactDOM from 'react-dom';
-export default class CompinentCom extends Component { 
+export default class CompinentCom extends Component {
+   const propTypes = {
+        name : PropTypes.number,
+    }
+    const defaultProps = {
+        xx : 'ssss'
+    } 
     constructor(props){
         super(props)
         this.state={
             name:props.name,
         }
-        // this.handleClick = this.handleClick.bind(this);
     }
-    // getDefaultProps() {
-    //     return { name: false } 
-    // }
-    // getInitialState() { 
-    //     return { name: this.props.name }; 
-    // }
+ 
     handleClick (event) { 
         this.setState({ name: 'name 变了' }); 
     };
