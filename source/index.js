@@ -28,5 +28,8 @@ import './lib/rem-min.js';
 // ]
 ReactDOM.render(
 	<App />,
-	document.getElementById('root')
+	document.getElementById('root'),
+	function() {
+		console.log(34242)
+	}
 )

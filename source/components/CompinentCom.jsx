@@ -9,7 +9,9 @@ export default class CompinentCom extends Component {
             name:props.name,
         }
     }
- 
+    // static propTypes={
+    //     name : PropTypes.number,
+    // }
     handleClick (event) { 
         this.setState({ name: 'name 变了' }); 
     };
@@ -20,16 +22,13 @@ export default class CompinentCom extends Component {
                 <div>我是Component状态组件</div>
                 <div>props.name--{this.props.name}</div>
                 <div>state.name--{this.state.name}</div>
-                <button onClick ={this.handleClick}>无bind改变name</button>
+                {/* <button onClick ={this.handleClick}>无bind改变name</button> */}
                 <button onClick ={this.handleClick.bind(this)}>bind改变name</button>
             </div>
         ); 
     } 
 };
 
-CompinentCom.propTypes = {
-    name : PropTypes.number,
-}
 CompinentCom.defaultProps = {
     xx : 'ssss'
 } 

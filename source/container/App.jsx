@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import NoState from '../components/NoState.jsx'
-// import CreateClassCom from '../components/CreateClassCom.jsx'
 import CompinentCom from '../components/CompinentCom.jsx'
 
 class App extends Component {
@@ -13,7 +12,7 @@ class App extends Component {
 
     }
     componentWillMount() {
-    
+        console.log(222)
     }
     handleClick(){
         this.setState({name:222})
@@ -22,9 +21,10 @@ class App extends Component {
         return (
             <div className="main">
                 <NoState name="prop init name"/>
-                {/* <CreateClassCom name="ssdcs"/> */}
                 <CompinentCom name="prop init name"/>
                 <button onClick={this.handleClick.bind(this)}>改变props</button>
+                <button onClick={this.handleClick.bind(this)}>改变props</button>
+       
             </div>
         );
     }
