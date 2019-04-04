@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Svg from "../components/Svg.jsx";
-
-class App extends Component {
+class Svg extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -16,10 +14,8 @@ class App extends Component {
     }
     render() {
         return (
-            <div>
-                <Svg/>
-            </div>
+            <div></div>
         );
     }
 }
-export default App;
+export default Svg;
