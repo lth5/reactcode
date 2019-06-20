@@ -44,7 +44,18 @@ const jsonp = (url) =>{
         document.getElementsByTagName('head')[0].appendChild(script);
     }) 
 }
-
+function getData(url){
+	return new Promise(function(resolve, reject){
+		xhr.onreadystatechange = ()=>{
+            onreadystatechange(resolve,reject);
+        } 
+        xhr.open('get',url);
+        xhr.send();
+        xhr.onreadystatechange = ()=>{
+            onreadystatechange(resolve,reject);
+        } 
+	});
+}
 const ajax = {
     get:get,
     jsonp:jsonp,
