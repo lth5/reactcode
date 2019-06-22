@@ -5,8 +5,6 @@ import store from './store';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = store.getState();
-
     };
   
     componentWillMount() {
