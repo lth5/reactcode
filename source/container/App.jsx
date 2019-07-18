@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import NoState from '../components/NoState.jsx'
 import CompinentCom from '../components/CompinentCom.jsx'
+import Hoc from '../components/Hoc.jsx'
+const MyHoc = Hoc(NoState,1,2,3,4,5,6);
 
 class App extends Component {
     constructor(props) {
@@ -22,6 +24,9 @@ class App extends Component {
             <div className="main">
                 <NoState name="prop init name"/>
                 <CompinentCom name="prop init name"/>
+                
+                {/* <Hoc /> */}
+                <MyHoc name="prop init name3"/>
                 <button onClick={this.handleClick.bind(this)}>改变props</button>
                 <button onClick={this.handleClick.bind(this)}>改变props</button>
        
