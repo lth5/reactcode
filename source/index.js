@@ -1,30 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './container/App.jsx';
-let datalist = [
-    {
-        id: 1,
-        title: '看你不知道的js下',
-        status: 'todo',
-        desc: 'adadadadad',
-        tasks:[]
-    },
-    {
-        id: 2,
-        title: '看你不知道的js中',
-        status: 'doing',
-        desc: 'adadadadad',
-        tasks:[]
-    },
-    {
-        id: 3,
-        title: '看你不知道的js上',
-        status: 'done',
-        desc: 'adadadadad',
-        tasks:[]
-    }
-]
+import createStore from './container/store';
+import PropTypes from 'prop-types';
+
+// export class Provider extends React.Component{
+//     static childContextTypes = {
+//         store: PropTypes.object
+//     }
+//     getChildContext(){
+//         return {store:this.store}
+//     }
+//     constructor(props, context){
+//         super(props, context)
+//         this.store = props.store
+//     }
+//     render(){
+//         return this.props.children
+//     }
+// }
+// let initState = {
+//     counter: {
+//       count: 0
+//     },
+//     info: {
+//       name: '',
+//       description: ''
+//     }
+// };
+// let store = createStore(initState);
 ReactDOM.render(
-	<App cards={datalist} />,
+	// <Provider store={store}>
+		<App/>
+    // </Provider>
+    ,
 	document.getElementById('root')
 )
